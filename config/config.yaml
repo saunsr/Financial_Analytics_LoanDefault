@@ -1,0 +1,13 @@
+# config/config.yaml
+dataset:
+  kaggle_name: kmldas/loan-default-prediction
+  local_raw_path: data/raw/Default_Fin.csv
+
+paths:
+  raw_data_dir: data/raw
+  processed_data_dir: data/processed
+  processed_filename: loan_default_clean.csv
+
+schema:
+  target_candidates: ["DEFAULT", "Defaulted?", "default", "defaulted"]
+  drop_if_present: ["Index", "index", "id", "ID"]  # harmless IDs to drop if found
